@@ -1,0 +1,90 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset204 PTSans-Regular;}
+{\colortbl;\red255\green255\blue255;\red46\green46\blue46;\red255\green255\blue255;\red26\green26\blue26;
+\red46\green46\blue46;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 \
+A1. 3\
+Query:\
+db.messages.find(\{"headers.From":"andrew.fastow@enron.com","headers.To":"jeff.skilling@enron.com"\}).count()\
+\
+or\
+\
+db.messages.aggregate([\{$unwind:"$headers.To"\},\{$match:\{"headers.From":"andrew.fastow@enron.com","headers.To":"jeff.skilling@enron.com"\}\},\{$group:\{_id:null,"mails":\{$sum:1\}\}\}])\
+\
+A2. 
+\f1\fs32 \cf2 \cb3 susan.mara@enron.com to richard.shapiro@enron.com\
+\
+974 emails
+\f0\fs24 \cf0 \cb1 \
+\
+Query: db.messages.aggregate([\{$unwind:"$headers.To"\},\{$group:\{_id:\{from:"$headers.From",to:"$headers.To"\},"mails":\{$sum:1\}\}\},\{$sort:\{mails:-1\}\},\{$limit:2\}])\
+\
+A3. db.messages.update(\{"headers.Message-ID":"<8147308.1075851042335.JavaMail.evans@thyme>"\},\{$push:\{"headers.To":"mrpotatohead@10gen.com"\}\})\
+\
+To verify:\
+db.messages.find(\{"headers.Message-ID":"<8147308.1075851042335.JavaMail.evans@thyme>"\}).pretty()\
+\
+\
+and \
+\
+db.messages.find(\{"headers.To":"mrpotatohead@10gen.com"\}).pretty()\
+\
+A4. 89jlkfdsjflks34j0d\
+See the modified files for query\
+comment = "comments."+comment_ordinal+".num_likes"\
+        print "comment is "+comment \
+        posts.update(\{'permalink':permalink\},\{'$inc':\{comment:1\}\})\
+A5. \
+\pard\pardeftab720\sl500
+
+\f1\fs32 \cf2 \cb3 \shad\shadx0\shady-20\shadr0\shado0 \shadc0 a_1_b_1\
+\pard\pardeftab720\sl500
+
+\f0 \cf4 \shad0 \
+\pard\pardeftab720\sl500
+
+\f1 \cf2 \shad\shadx0\shady-20\shadr0\shado0 \shadc0 a_1_c_1\
+\pard\pardeftab720\sl500
+
+\f0 \cf4 \shad0 \
+\pard\pardeftab720\sl500
+
+\f1 \cf2 \shad\shadx0\shady-20\shadr0\shado0 \shadc0 c_1\
+\
+A6.\
+Set w=0, j=0 on writes\
+\pard\pardeftab720\sl500
+
+\f0 \cf4 \shad0 \
+\pard\pardeftab720\sl500
+
+\f1 \cf2 \shad\shadx0\shady-20\shadr0\shado0 \shadc0 Remove all indexes from the collection\
+\pard\pardeftab720\sl500
+
+\f0 \cf4 \shad0 \
+\pard\pardeftab720\sl500
+
+\f1 \cf2 \shad\shadx0\shady-20\shadr0\shado0 \shadc0 Provide a hint to MongoDB that it should not use an index for the inserts\
+\
+A7.  \shad0 4499664274
+\fs36 \shad\shadx0\shady-20\shadr0\shado0 \shadc0 \
+use test;\
+var images = db.images.find(\{\});\
+var imageCount = 0;\
+\pard\pardeftab720\sl500
+\cf5 \cb1 \shad\shadx0\shady-20\shadr0\shado0 \shadc0 var imagesToRemove = 0;\
+\pard\pardeftab720\sl500
+\cf2 \cb3 \shad\shadx0\shady-20\shadr0\shado0 \shadc0 for(i=0;images.hasNext();i++)\{\
+    imageCount= \cf5 \cb1 \shad\shadx0\shady-20\shadr0\shado0 \shadc0 i+1;\cf2 \cb3 \shad\shadx0\shady-20\shadr0\shado0 \shadc0 \
+    var image = images.next();\
+    var albumCount = db.album.find(\{images:image._id\}).count();\
+    if(albumCount==0)\{\
+        \cf5 \cb1 \shad\shadx0\shady-20\shadr0\shado0 \shadc0 imagesToRemove++;\
+        db.images.remove(\{_id:image._id\})\cf2 \cb3 \shad\shadx0\shady-20\shadr0\shado0 \shadc0 \
+    \}\
+\}\
+db.images.aggregate([\{$group:\{_id:null, total:\{$sum:"$_id"\}\}\}])\
+}

@@ -1,0 +1,124 @@
+Thu Dec  6 17:32:49 [initandlisten] MongoDB starting : pid=8035 port=27017 dbpath=/data/rs1 64-bit host=sameer-mac.local
+Thu Dec  6 17:32:49 [initandlisten] 
+Thu Dec  6 17:32:49 [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+Thu Dec  6 17:32:49 [initandlisten] db version v2.2.0, pdfile version 4.5
+Thu Dec  6 17:32:49 [initandlisten] git version: f5e83eae9cfbec7fb7a071321928f00d1b0c5207
+Thu Dec  6 17:32:49 [initandlisten] build info: Darwin bs-osx-106-x86-64-1.local 10.8.0 Darwin Kernel Version 10.8.0: Tue Jun  7 16:33:36 PDT 2011; root:xnu-1504.15.3~1/RELEASE_I386 i386 BOOST_LIB_VERSION=1_49
+Thu Dec  6 17:32:49 [initandlisten] options: { dbpath: "/data/rs1", fork: true, logpath: "1.log", port: 27017, replSet: "m101", smallfiles: true }
+Thu Dec  6 17:32:49 [initandlisten] journal dir=/data/rs1/journal
+Thu Dec  6 17:32:49 [initandlisten] recover : no journal files present, no recovery needed
+Thu Dec  6 17:32:49 [websvr] admin web console waiting for connections on port 28017
+Thu Dec  6 17:32:49 [initandlisten] waiting for connections on port 27017
+Thu Dec  6 17:32:50 [initandlisten] connection accepted from 10.20.9.27:52512 #1 (1 connection now open)
+Thu Dec  6 17:32:50 [rsStart] replSet can't get local.system.replset config from self or any seed (EMPTYCONFIG)
+Thu Dec  6 17:32:50 [rsStart] replSet info you may need to run replSetInitiate -- rs.initiate() in the shell -- if that is not already done
+Thu Dec  6 17:33:00 [rsStart] replSet can't get local.system.replset config from self or any seed (EMPTYCONFIG)
+Thu Dec  6 17:33:10 [rsStart] replSet can't get local.system.replset config from self or any seed (EMPTYCONFIG)
+Thu Dec  6 17:33:20 [rsStart] replSet can't get local.system.replset config from self or any seed (EMPTYCONFIG)
+Thu Dec  6 17:33:30 [rsStart] replSet can't get local.system.replset config from self or any seed (EMPTYCONFIG)
+Thu Dec  6 17:33:40 [rsStart] replSet can't get local.system.replset config from self or any seed (EMPTYCONFIG)
+Thu Dec  6 17:33:50 [rsStart] replSet can't get local.system.replset config from self or any seed (EMPTYCONFIG)
+Thu Dec  6 17:33:57 [initandlisten] connection accepted from 127.0.0.1:52525 #2 (2 connections now open)
+Thu Dec  6 17:34:00 [rsStart] replSet can't get local.system.replset config from self or any seed (EMPTYCONFIG)
+Thu Dec  6 17:34:10 [rsStart] replSet can't get local.system.replset config from self or any seed (EMPTYCONFIG)
+Thu Dec  6 17:34:20 [rsStart] replSet can't get local.system.replset config from self or any seed (EMPTYCONFIG)
+Thu Dec  6 17:34:27 [conn2] replSet replSetInitiate admin command received from client
+Thu Dec  6 17:34:27 [conn2] replSet replSetInitiate config object parses ok, 3 members specified
+Thu Dec  6 17:34:27 [conn2] replSet replSetInitiate all members seem up
+Thu Dec  6 17:34:27 [conn2] ******
+Thu Dec  6 17:34:27 [conn2] creating replication oplog of size: 183MB...
+Thu Dec  6 17:34:27 [FileAllocator] allocating new datafile /data/rs1/local.ns, filling with zeroes...
+Thu Dec  6 17:34:27 [FileAllocator] creating directory /data/rs1/_tmp
+Thu Dec  6 17:34:27 [FileAllocator] done allocating datafile /data/rs1/local.ns, size: 16MB,  took 0.067 secs
+Thu Dec  6 17:34:27 [FileAllocator] allocating new datafile /data/rs1/local.0, filling with zeroes...
+Thu Dec  6 17:34:28 [FileAllocator] done allocating datafile /data/rs1/local.0, size: 256MB,  took 0.98 secs
+Thu Dec  6 17:34:28 [conn2] ******
+Thu Dec  6 17:34:28 [conn2] replSet info saving a newer config version to local.system.replset
+Thu Dec  6 17:34:28 [conn2] replSet saveConfigLocally done
+Thu Dec  6 17:34:28 [conn2] replSet replSetInitiate config now saved locally.  Should come online in about a minute.
+Thu Dec  6 17:34:28 [conn2] command admin.$cmd command: { replSetInitiate: { _id: "m101", members: [ { _id: 0.0, host: "localhost:27017" }, { _id: 1.0, host: "localhost:27018" }, { _id: 2.0, host: "localhost:27019" } ] } } ntoreturn:1 keyUpdates:0 locks(micros) W:1175971 reslen:112 1178ms
+Thu Dec  6 17:34:30 [rsStart] replSet I am localhost:27017
+Thu Dec  6 17:34:30 [rsStart] replSet STARTUP2
+Thu Dec  6 17:34:30 [rsHealthPoll] replSet member localhost:27018 is up
+Thu Dec  6 17:34:31 [rsSync] replSet SECONDARY
+Thu Dec  6 17:34:32 [rsHealthPoll] replSet member localhost:27019 is up
+Thu Dec  6 17:34:32 [rsMgr] replSet not electing self, not all members up and we have been up less than 5 minutes
+Thu Dec  6 17:34:35 [initandlisten] connection accepted from 127.0.0.1:52530 #3 (3 connections now open)
+Thu Dec  6 17:34:36 [rsHealthPoll] replSet member localhost:27019 is now in state STARTUP2
+Thu Dec  6 17:34:36 [rsMgr] not electing self, localhost:27019 would veto
+Thu Dec  6 17:34:39 [initandlisten] connection accepted from 127.0.0.1:52532 #4 (4 connections now open)
+Thu Dec  6 17:34:40 [rsHealthPoll] replSet member localhost:27018 is now in state STARTUP2
+Thu Dec  6 17:34:40 [rsMgr] not electing self, localhost:27018 would veto
+Thu Dec  6 17:34:46 [rsMgr] replSet info electSelf 0
+Thu Dec  6 17:34:46 [rsMgr] replSet PRIMARY
+Thu Dec  6 17:34:46 [rsHealthPoll] replSet member localhost:27018 is now in state RECOVERING
+Thu Dec  6 17:34:48 [rsHealthPoll] replSet member localhost:27019 is now in state RECOVERING
+Thu Dec  6 17:34:51 [conn3] end connection 127.0.0.1:52530 (3 connections now open)
+Thu Dec  6 17:34:51 [initandlisten] connection accepted from 127.0.0.1:52535 #5 (5 connections now open)
+Thu Dec  6 17:34:52 [initandlisten] connection accepted from 127.0.0.1:52536 #6 (5 connections now open)
+Thu Dec  6 17:34:52 [conn6] end connection 127.0.0.1:52536 (4 connections now open)
+Thu Dec  6 17:34:53 [initandlisten] connection accepted from 127.0.0.1:52537 #7 (5 connections now open)
+Thu Dec  6 17:34:53 [initandlisten] connection accepted from 127.0.0.1:52538 #8 (6 connections now open)
+Thu Dec  6 17:34:54 [slaveTracking] build index local.slaves { _id: 1 }
+Thu Dec  6 17:34:54 [slaveTracking] build index done.  scanned 0 total records. 0 secs
+Thu Dec  6 17:34:55 [conn4] end connection 127.0.0.1:52532 (5 connections now open)
+Thu Dec  6 17:34:55 [initandlisten] connection accepted from 127.0.0.1:52539 #9 (6 connections now open)
+Thu Dec  6 17:34:56 [rsHealthPoll] replSet member localhost:27019 is now in state SECONDARY
+Thu Dec  6 17:34:57 [initandlisten] connection accepted from 127.0.0.1:52540 #10 (7 connections now open)
+Thu Dec  6 17:34:57 [conn10] end connection 127.0.0.1:52540 (6 connections now open)
+Thu Dec  6 17:34:58 [initandlisten] connection accepted from 127.0.0.1:52541 #11 (7 connections now open)
+Thu Dec  6 17:34:58 [initandlisten] connection accepted from 127.0.0.1:52542 #12 (8 connections now open)
+Thu Dec  6 17:35:00 [rsHealthPoll] replSet member localhost:27018 is now in state SECONDARY
+Thu Dec  6 17:35:21 [conn5] end connection 127.0.0.1:52535 (7 connections now open)
+Thu Dec  6 17:35:21 [initandlisten] connection accepted from 127.0.0.1:52547 #13 (8 connections now open)
+Thu Dec  6 17:35:25 [conn9] end connection 127.0.0.1:52539 (7 connections now open)
+Thu Dec  6 17:35:25 [initandlisten] connection accepted from 127.0.0.1:52548 #14 (8 connections now open)
+Thu Dec  6 17:35:51 [conn13] end connection 127.0.0.1:52547 (7 connections now open)
+Thu Dec  6 17:35:51 [initandlisten] connection accepted from 127.0.0.1:52553 #15 (8 connections now open)
+Thu Dec  6 17:35:55 [conn14] end connection 127.0.0.1:52548 (7 connections now open)
+Thu Dec  6 17:35:55 [initandlisten] connection accepted from 127.0.0.1:52554 #16 (9 connections now open)
+Thu Dec  6 17:36:21 [conn15] end connection 127.0.0.1:52553 (7 connections now open)
+Thu Dec  6 17:36:21 [initandlisten] connection accepted from 127.0.0.1:52563 #17 (8 connections now open)
+Thu Dec  6 17:36:25 [conn16] end connection 127.0.0.1:52554 (7 connections now open)
+Thu Dec  6 17:36:25 [initandlisten] connection accepted from 127.0.0.1:52564 #18 (8 connections now open)
+Thu Dec  6 17:36:51 [conn17] end connection 127.0.0.1:52563 (7 connections now open)
+Thu Dec  6 17:36:51 [initandlisten] connection accepted from 127.0.0.1:52571 #19 (8 connections now open)
+Thu Dec  6 17:36:55 [conn18] end connection 127.0.0.1:52564 (7 connections now open)
+Thu Dec  6 17:36:55 [initandlisten] connection accepted from 127.0.0.1:52572 #20 (9 connections now open)
+Thu Dec  6 17:37:00 [initandlisten] connection accepted from 127.0.0.1:52574 #21 (9 connections now open)
+Thu Dec  6 17:37:00 [conn21] end connection 127.0.0.1:52574 (8 connections now open)
+Thu Dec  6 17:37:00 [initandlisten] connection accepted from 127.0.0.1:52576 #22 (9 connections now open)
+Thu Dec  6 17:37:00 [conn22] end connection 127.0.0.1:52576 (8 connections now open)
+Thu Dec  6 17:37:21 [conn19] end connection 127.0.0.1:52571 (7 connections now open)
+Thu Dec  6 17:37:21 [initandlisten] connection accepted from 127.0.0.1:52591 #23 (8 connections now open)
+Thu Dec  6 17:37:25 [conn20] end connection 127.0.0.1:52572 (7 connections now open)
+Thu Dec  6 17:37:25 [initandlisten] connection accepted from 127.0.0.1:52594 #24 (8 connections now open)
+Thu Dec  6 17:37:51 [conn23] end connection 127.0.0.1:52591 (7 connections now open)
+Thu Dec  6 17:37:51 [initandlisten] connection accepted from 127.0.0.1:52599 #25 (8 connections now open)
+Thu Dec  6 17:37:55 [conn24] end connection 127.0.0.1:52594 (7 connections now open)
+Thu Dec  6 17:37:55 [initandlisten] connection accepted from 127.0.0.1:52600 #26 (8 connections now open)
+Thu Dec  6 17:38:08 got signal 15 (Terminated: 15), will terminate after current cmd ends
+Thu Dec  6 17:38:08 [interruptThread] now exiting
+Thu Dec  6 17:38:08 dbexit: 
+Thu Dec  6 17:38:08 [interruptThread] shutdown: going to close listening sockets...
+Thu Dec  6 17:38:08 [interruptThread] closing listening socket: 6
+Thu Dec  6 17:38:08 [interruptThread] closing listening socket: 7
+Thu Dec  6 17:38:08 [conn2] end connection 127.0.0.1:52525 (7 connections now open)
+Thu Dec  6 17:38:08 [interruptThread] closing listening socket: 8
+Thu Dec  6 17:38:08 [conn12] end connection 127.0.0.1:52542 (6 connections now open)
+Thu Dec  6 17:38:08 [interruptThread] removing socket file: /tmp/mongodb-27017.sock
+Thu Dec  6 17:38:08 [conn26] end connection 127.0.0.1:52600 (6 connections now open)
+Thu Dec  6 17:38:08 [interruptThread] shutdown: going to flush diaglog...
+Thu Dec  6 17:38:08 [conn8] end connection 127.0.0.1:52538 (5 connections now open)
+Thu Dec  6 17:38:08 [interruptThread] shutdown: going to close sockets...
+Thu Dec  6 17:38:08 [interruptThread] shutdown: waiting for fs preallocator...
+Thu Dec  6 17:38:08 [interruptThread] shutdown: lock for final commit...
+Thu Dec  6 17:38:08 [interruptThread] shutdown: final commit...
+Thu Dec  6 17:38:08 [conn25] end connection 127.0.0.1:52599 (3 connections now open)
+Thu Dec  6 17:38:08 [conn1] end connection 10.20.9.27:52512 (3 connections now open)
+Thu Dec  6 17:38:08 [interruptThread] shutdown: closing all files...
+Thu Dec  6 17:38:08 [interruptThread] closeAllFiles() finished
+Thu Dec  6 17:38:08 [interruptThread] journalCleanup...
+Thu Dec  6 17:38:08 [interruptThread] removeJournalFiles
+Thu Dec  6 17:38:08 [interruptThread] shutdown: removing fs lock...
+Thu Dec  6 17:38:08 dbexit: really exiting now
